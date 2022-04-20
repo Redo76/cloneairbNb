@@ -7,10 +7,10 @@
 /* Début du header*/
 
 header{
-    position: sticky;
-    top: 0;
+    position: sticky;  /* Positions:sticky permet a la barre de rester fixe en haut de l'écran sans couper l'image du dessous. */
+    top: 0; /* Permet de positionner le header en haut de l'écran */
     background-color: white;
-    z-index: 50;
+    z-index: 50; /* Permet de donner la priorité à un élement sur un autre par rapport à la superposition (z-index:50 gagne sur z-index:10). */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,7 +22,7 @@ header{
     width: 100%;
     max-height: 40px;
     margin-right: 10px;
-    cursor: pointer;
+    cursor: pointer; /* Elle permet que lorsqu'on passe la souris sur cet élement, le curseur devient une main qui pointe du doigt. */
 }
 
     /* Début Barre de recherche*/
@@ -32,19 +32,19 @@ header{
     height: 100%;
     display: flex;
     align-items: center;
-    position: relative;
+    position: relative; /* En rapport avec la loupe dans mediaqueries pour lui permettre de contenir la loupe dans sa div */
 }
 #search{
     border: none;
-    outline: none;
+    outline: none; /* Retirer le contour noir qui s'affiche au clic. */
     font-size: 15px;
     width: 100%;
 }
-::placeholder{
+::placeholder{ /* Mettre 2 fois ":" pour appeler le placeholder  */
     color: rgb(162, 161, 161);
 }
 .loupe{
-    display: none;
+    display: none; /* Permet de faire disparaitre la loupe en mobilefirst */
 }
 
     /* Fin Barre de recherche*/
@@ -57,9 +57,9 @@ header{
     align-items: center;
 }
 .partie_droite p{
-    display: none;
+    display: none; /* Permet de faire disparaitre le paragraphe en mobilefirst */
 }
-.compte{
+.compte{ /* L'icone de droite contient deux élements : "Les trois petites barres" + "La photo de profil". On les a reuni en une seule div */
     display: flex;
     align-items: center;
     border: 2px solid gray ;
@@ -73,7 +73,7 @@ header{
     color: rgb(90, 90, 90);
     cursor: pointer;
 }
-.acc{
+.acc{ /* Represente "Les trois petites barres" + "La photo de profil"*/
     height: 24px;
 }
 
@@ -82,16 +82,14 @@ header{
 /* Fin du header*/
 
 #parent {
-    /* position: absolute; */
     width: 100%;
     height: 30vh;
-    /* background: blue; */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/imageforet.webp");
-    background-size: cover;
-    background-position: center;
+    background-image: url("../img/imageforet.webp"); /* Permet d'appeler l'image directement à partir du CSS. */
+    background-size: cover; /* Permet de d'ajuster l'image pour couvrir la totalité de la surface */
+    background-position: center; /* Permet de centrer l'image par rapport à la surface */
 }
 #btn1 {
     color : rgb(166, 124, 235);
@@ -104,11 +102,10 @@ header{
     border: 1px solid rgba(120, 116, 116, 0.101);
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
-#btn1:hover {
+#btn1:hover { /* Au passage de la souris, affichage d'une ombre. */
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 #petit_block {
-
     text-align: center;
 }
 
@@ -141,24 +138,24 @@ main{
 .cityBox:hover{
     background-color: rgba(211, 211, 211, 0.298);
     border-radius: 10px;
-    transform: scale(1.05);
-    transition: .2s ease-out;
+    transform: scale(1.05); /* Permet de modifier la taille initiale de l'élément en fonction d'un indice. */
+    transition: .2s ease-out; /* Détermine la durée de l'animation et la fluidité (ease-out).*/
 }
 /* Cette fois on ajoute une couleur de fond au click de la souris */
-.cityBox:active{
+.cityBox:active{ /* Au clic de la souris, l'élément devient bleu */
     background-color: lightskyblue;
 }
-.city{
+.city{ /* La div qui contient l'image des villes */
     height: 64px;
     width: 64px;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; /* Permet de cacher tout ce qui dépasse de la div */
 }
-.city_img{
+.city_img{ /* L'image des villes */
     width: 100%;
     height: 100%;
 }
-.info{
+.info{ /* La div qui contient la ville et le trajet */
     padding: 0 15px;
 }
 h2, .gray{
@@ -172,24 +169,25 @@ h2, .gray{
     /* Fin Partie "Explore Nearby" du main*/
 
     /* Début Partie "Live Anywhere" du main*/
+
 .main3{
-    overflow-x: scroll;
+    overflow-x: scroll; /* Permet de scroller horizontalement le slider. */
     width: 100%;
 }
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar{ /* Permet d'appeler la barre de scroll. */
+    display: none;  /* Fait disparaitre la barre. */
 }
 .main3_flex{
     display: flex ;
-    width: 1350px;
+    width: 1350px; /* Ce nombre équivaut à la somme de toutes les images. ( 4 x 320px ). */
     padding: 10px 0;
 }
 .liveBox{
     margin-left: 12px;
 }
 .liveBox:hover{
-    transform: scale(1.05);
-    transition: 0.3s ease;
+    transform: scale(1.05); /* Permet de modifier la taille initiale de l'élément en fonction d'un indice. */
+    transition: 0.3s ease; /* Détermine la durée de l'animation et la fluidité (ease).*/
 }
 .liveBox img{
     width: 320px;
@@ -208,26 +206,19 @@ h2, .gray{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url("../img/image1.webp");
-        background-size: cover;
-        background-position: center;
+        background-image: url("../img/image1.webp");  /* Permet d'appeler l'image directement à partir du CSS. */
+        background-size: cover; /* Permet de d'ajuster l'image pour couvrir la totalité de la surface */
+        background-position: center; /* Permet de centrer l'image par rapport à la surface */
         margin-top: 10%;
         border-radius: 1rem;
         padding-left: 10%;
         padding-bottom: 25%;
         position: relative;
-        
     }
     #petit_block2 {
-        /* text-align: left; */
-        /* padding-left: 13%; */
-        /* padding-bottom: 22%; */
         position: absolute;
         left: 3%;
         top: 20%;
-        width: 80%;
-        
-    
     }
     h1 {
         font-weight: 400;
@@ -237,8 +228,6 @@ h2, .gray{
     #petit_block2 p {
         font-size: 18px;
         padding-bottom:10px;
-        /* font-weight: lighter; */
-        
     }
     #btn2 {
         color : white;
@@ -252,6 +241,7 @@ h2, .gray{
 /* Fin du main*/
 
 /*Début du footer*/
+
 footer {
     margin-top: 55px;
     background-color: rgb(243 244 246);
@@ -259,7 +249,6 @@ footer {
 }
 
 .about {
-    text-align: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -287,32 +276,35 @@ footer {
 }
 
 /* Fin du footer*/
+
+/* Départ en mobileFirst : Utilisation des min-width ( Si on avait commencé en desktop, on aurait utilisé des max-width ) */
+
 @media screen  and (min-width: 530px) {
-        #parent {
-    height: 40vh;
-        }
+    #parent {
+        height: 40vh;
+    }
 }
 
 
 @media screen and (min-width: 640px) {
     #section-flex{
-        height: 50vh;
+        height: 50vh; /* On détermine une taille à la div, jusqu'ici ce n'était pas le cas. */
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: column; /* On modifie la direction en colonne */
+        flex-wrap: wrap; /* On lui met un wrap pour répartir les éléments qui dépassent de la div en 2 colonnes.  */
     }
 }
 
 @media screen  and (min-width: 670px) {
-        #parent {
-    height: 50vh;
-        }
+    #parent {
+        height: 50vh;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .div-search{
         overflow: hidden;
-        border: 2px solid rgba(128, 128, 128, 0.252);
+        border: 2px solid rgba(128, 128, 128, 0.252); /* Apparition d'une bordure sur la barre de recherche. */
         border-radius: 20px;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         padding: 1px;
@@ -322,26 +314,22 @@ footer {
         padding: 5px;
     }
     .loupe{
-        display: block;
-        position: absolute;
-        right: 0;
+        display: block; /* Apparition de la loupe qui était jusqu'à présent en display : none. */
+        position: absolute; /* Permet de déplacer la loupe dans la barre de recherche. */
+        right: 0;   /* Fixer la loupe à droite. */
         width: 28px;
         padding: 5px;
         background-color: rgb(239 68 68);
         color: white;
-        border-radius: 50%;
+        border-radius: 50%; /* Permet à la bordure de former un cercle. */
         cursor: pointer;
     }
     .partie_droite p{
-        display: block;
+        display: block; /* Apparition de "Become a host".*/
         color: gray;
         padding-right: 10px;
     }
     .about {
-        text-align: left;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         margin-left: 10%;
         margin-right: 10%;
     }
@@ -364,11 +352,10 @@ footer {
 @media screen and (min-width: 1024px) {
     #section-flex{
         height: 32vh;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: row; /* On modifie la direction en ligne, il va donc répartir les éléments dépassant à l'horizontal */
     }
     .cityBox{
-    width: 30%;
+        width: 30%;
     }
 }
 @media screen and (min-width: 1280px) {
@@ -378,5 +365,4 @@ footer {
     .cityBox{
         width: 23%;
     }
-    
 }
